@@ -1,0 +1,17 @@
+b1 = 3.4
+x_bar = 2.5
+y_bar = 10.6
+ssxx = 4.77
+ssyy = 59.21
+ssxy = 16.22
+sse = ssyy - b1*ssxy
+n = 20
+s2 = sse/(n-2)
+s = (s2)^(1/2)
+t_alpha = 3.182
+x = 3.0
+y_hat = 2.1 + b1*x
+left = y_hat-t_alpha*s*(1+1/n + (x-x_bar)^2/ssxx)^(1/2)
+right = y_hat+t_alpha*s*(1+1/n + (x-x_bar)^2/ssxx)^(1/2)
+y_left = y_hat-(2.16)*ssxy*(1/n + (x-x_bar)^2/ssxx)^(1/2)
+y_right = y_hat+(2.16)*ssxy*(1/n + (x-x_bar)^2/ssxx)^(1/2)
